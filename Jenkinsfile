@@ -14,6 +14,8 @@ pipeline{
 		stage('Build Docker'){
 			steps{
 				sh 'pwd'
+				sh 'sudo docker cp /home/backup/php54/Dockerfile ./var/jenkins_home/workspace/Pipeline edsi/Dockerfile'
+				sh 'sudo docker cp /home/backup/php54/Dockerfile ./home/backup/d4a/code/Dockerfile'
 				sh 'sudo docker build --tag=ndeah .'
 			}
 		}
