@@ -11,6 +11,11 @@ pipeline{
 				sh 'sudo docker ps'
 			}
 		}
+		stage('cd home bkcp'){
+			steps{
+				sh 'sudo cd /home/backup/'
+			}
+		}
 		stage('Build Docker'){
 			steps{
 				sh 'sudo docker build --tag=ndeah .'
