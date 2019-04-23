@@ -19,7 +19,7 @@ pipeline{
 		}
 		stage('Deploy Container'){
 			steps{
-				sh 'sudo docker run -p 80:80 --name ndeahepic -rm ndeah'
+				sh 'sudo docker run -p 80:80 --name ndeahepic'
 				sh 'sudo docker-compose up -d'
 			}
 			
