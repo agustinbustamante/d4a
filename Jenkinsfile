@@ -13,7 +13,7 @@ pipeline{
 		}
 		stage('Build Docker'){
 			steps{
-				sh 'sudo docker build --tag=ndeah'
+				sh 'sudo docker build --tag=ndeah .'
 			}
 		}
 		stage('Deploy Container'){
