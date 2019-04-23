@@ -11,5 +11,16 @@ pipeline{
 				sh 'sudo docker ps'
 			}
 		}
+		stage('Build Docker'){
+			steps{
+				sh 'sudo docker build --tag=ndeah'
+			}
+		}
+		stage('Deploy Container'){
+			steps{
+				sh 'sudo docker run -p 80:80 --name ndeahepic -rm ndeah'
+			}
+			
+		}
 	}
 }
